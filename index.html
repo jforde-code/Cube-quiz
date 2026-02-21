@@ -76,7 +76,8 @@
 
 <input type="number" id="answer" placeholder="Your answer" onkeydown="handleKey(event)">
 
-<button onclick="checkAnswer()">Submit</button>
+<button id="submitBtn" onclick="checkAnswer()">Submit</button>
+
 <button id="nextBtn" onclick="newQuestion()" style="display:none;">Next</button>
 
 <p id="result"></p>
@@ -98,7 +99,10 @@ function newQuestion() {
 
   document.getElementById("result").textContent = "";
   document.getElementById("answer").value = "";
-  document.getElementById("nextBtn").style.display = "none";
+  
+document.getElementById("submitBtn").style.display = "inline-block";
+
+document.getElementById("nextBtn").style.display = "none";
 }
 
 function handleKey(event) {
@@ -116,7 +120,10 @@ function checkAnswer() {
     result.textContent = "Correct!";
     result.className = "correct";
     document.getElementById("streak").textContent = "Streak: " + streak;
-    document.getElementById("nextBtn").style.display = "inline-block";
+    
+document.getElementById("submitBtn").style.display = "none";
+
+document.getElementById("nextBtn").style.display = "inline-block";
   } else {
     streak = 0;
     result.textContent = "Try again!";
