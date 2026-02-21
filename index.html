@@ -160,12 +160,12 @@ function retryAnswer() {
 }
 
 function logAttempt(question, answer, correct) {
-  fetch("https://script.google.com/macros/s/AKfycbzyqd8VsxN2JHSCzql-U5UmOSKwyqWU7vw4sx-0FxWcwsZcTTz2LOMdNjqjeK2r7BRM/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxKNYMrrON1b10yNo5pMwKj0sSxLfTY4wlpXBNpwGwjH7jXtxblWMPXB7GC_PWXezA/exec", {
     method: "POST",
     body: JSON.stringify({
       question: question,
       answer: answer,
-      result: correct
+      result: result
     })
   });
 }
