@@ -159,7 +159,7 @@ function retryAnswer() {
   document.getElementById("result").textContent = ""; // clear result message
 }
 
-function logAttempt(question, answer, correct) {
+function logAttempt(question, answer, result) {
   fetch("https://script.google.com/macros/s/AKfycbxKNYMrrON1b10yNo5pMwKj0sSxLfTY4wlpXBNpwGwjH7jXtxblWMPXB7GC_PWXezA/exec", {
     method: "POST",
     body: JSON.stringify({
