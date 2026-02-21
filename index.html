@@ -92,7 +92,7 @@ function newQuestion() {
   cubedNumber = correctNumber ** 3;
 
   const q = document.getElementById("question");
-  q.textContent = "What is the cube root of " + cubedNumber + "?";
+  q.textContent = "What is the cube root of " + cubedNumber.toLocaleString() + "?";
   q.classList.remove("show");
   setTimeout(() => q.classList.add("show"), 50);
 
