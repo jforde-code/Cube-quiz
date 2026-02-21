@@ -101,7 +101,9 @@ function newQuestion() {
   document.getElementById("answer").value = "";
 
 document.getElementById("answer").disabled = false;
-  
+ 
+document.getElementById("answer").focus();
+
 document.getElementById("submitBtn").style.display = "inline-block";
 
 document.getElementById("nextBtn").style.display = "none";
